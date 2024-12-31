@@ -31,7 +31,7 @@ function productsPage() {
         <ProductsTable />
 
         {/* CHARTS */}
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mt-4'>
           <SalesTrendChart />
           <CategoryDistributionChart />
         </div>

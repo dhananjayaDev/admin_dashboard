@@ -43,11 +43,10 @@ const ProductsTable = () => {
   const [filteredProducts, setFilteredProducts] = useState(PRODUCT_DATA);
 
 const handleSearch = (e) => {  
-    const term = e.target.value;
+    const term = e.target.value.toLowerCase();
     setSearchTerm(term);
-    PRODUCT_DATA.filter(product => {return product.name.toLowerCase().includes(term.toLowerCase());
-    });
-    includes(term.toLowerCase());
+    const filtered = PRODUCT_DATA.filter(product => product.name.toLowerCase().includes(term) || product.category.toLowerCase().includes(term));
+    setFilteredProducts(filtered);
 }
 
 
@@ -85,22 +84,29 @@ const handleSearch = (e) => {
             </tr>
           </thead>
           <tbody className='divide-y divide-gray-700'>
-            {PRODUCT_DATA.map(product => (
-              <tr key={product.id}>
-                <td>{product.name}</td>
-                <td>{product.category}</td>
-                <td>${product.price}</td>
-                <td>{product.stock}</td>
-                <td>{product.sales}</td>
-                <td className='text-right'>
-                  <button className='text-white p-1 hover:bg-gray-700 rounded-full'>
-                    <Edit size={16} />
+            {filteredProducts.map(product => (
+              <motion.tr key={product.id}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}>
+                <td
+                  className='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-100 gap-2 items-center flex'
+                >
+                  <img src={`https://picsum.photos/seed/${product.id}/50`} alt={product.name} className='rounded-full size-10' />
+                  {product.name}</td>
+                <td className='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-100'>{product.category}</td>
+                <td className='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-100'>${product.price}</td>
+                <td className='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-100'>{product.stock}</td>
+                <td className='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-100'>{product.sales}</td>
+                <td className='text-left px-6 py-4 '>
+                  <button className='text-indigo-400 hover:text-indigo-300 mr-2'> 
+                    <Edit size={18} />
                   </button>
-                  <button className='text-white p-1 hover:bg-gray-700 rounded-full'>
-                    <Trash2 size={16} />
+                  <button className='text-red-400 hover:text-red-300'>
+                    <Trash2 size={18} />
                   </button>
                 </td>
-              </tr>
+              </motion.tr>
             ))}
           </tbody>
         </table>
