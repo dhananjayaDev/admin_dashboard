@@ -6,7 +6,7 @@ import CategoryDistributionChart from "../components/overview/CategoryDistributi
 
 
 
-import { BarChart2, ShoppingBag, Users, Zap } from "lucide-react";
+import { AlertTriangle, BoxIcon, DollarSign, TrendingUp } from "lucide-react";
 import { motion } from 'framer-motion';
 
 function productsPage() {
@@ -22,10 +22,10 @@ function productsPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <StatCard title='Total Sales' icon={Zap} value='$12,345' color='#6366F1' />
-          <StatCard title='New Users' icon={Users} value='1,234' color='#8B5CF6' />
-          <StatCard title='Total Products' icon={ShoppingBag} value='567' color='#EC4899' />
-          <StatCard title='Conversation Rate' icon={BarChart2} value='12.5%' color='#10B981' />
+          <StatCard title='Total Products' icon={BoxIcon} value='1234' color='#6366F1' />
+          <StatCard title='Top Selling' icon={TrendingUp} value='89' color='#10B981' />
+          <StatCard title='Low Stock' icon={AlertTriangle} value='23' color='#B8860B' />
+          <StatCard title='Total Revenue' icon={DollarSign} value='$543,210' color='#EC4899' />
         </motion.div>
 
         <ProductsTable />
