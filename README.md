@@ -144,12 +144,6 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ---
 
-Enjoy using the React Admin Dashboard! If you find this project helpful, please give it a ⭐️ on GitHub.
-
----
-
-Let me know if you need further adjustments or additional sections! 🚀
-
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
