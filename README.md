@@ -1,7 +1,5 @@
 # React + Vite
 
-Here’s a professional and detailed **README.md** description for your React Admin Dashboard repository:
-
 ---
 
 # React Admin Dashboard
