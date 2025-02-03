@@ -73,15 +73,15 @@ Check out the live demo of the React Admin Dashboard:
 
 | **Overview Page** | **Products Page** |
 |-------------------|-------------------|
-| ![Overview](screenshots/overview.png) | ![Products](screenshots/products.png) |
+| ![Overview](https://github.com/dhananjayaDev/admin_dashboard/blob/master/overview.png) | ![Products](https://github.com/dhananjayaDev/admin_dashboard/blob/master/products.png) |
 
 | **Users Page** | **Sales Page** |
 |----------------|----------------|
-| ![Users](screenshots/users.png) | ![Sales](screenshots/sales.png) |
+| ![Users](https://github.com/dhananjayaDev/admin_dashboard/blob/master/users.png) | ![Sales](https://github.com/dhananjayaDev/admin_dashboard/blob/master/sales.png) |
 
 | **Analytics Page** | **Settings Page** |
 |--------------------|-------------------|
-| ![Analytics](screenshots/analytics.png) | ![Settings](screenshots/settings.png) |
+| ![Analytics](https://github.com/dhananjayaDev/admin_dashboard/blob/master/analytics.png) | ![Settings](https://github.com/dhananjayaDev/admin_dashboard/blob/master/settings.png) |
 
 ---
 
